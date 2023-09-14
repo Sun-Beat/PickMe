@@ -48,7 +48,6 @@ void init() {
 void TitleDraw()
 {
     int x = 5, y = 3;
-    //textcolor(14);
 
     gotoxy(x, y++); printf("\t\t\t\t  _______  ___   _______  ___   _  __   __  _______ ");
     gotoxy(x, y++); printf("\t\t\t\t |       ||   | |       ||   | | ||  |_|  ||       |");
@@ -77,7 +76,6 @@ void TitleDraw()
 }
 
 int menuDraw() {
-    //textcolor(7);
     int x = 55;
     int y = 26;
     int menuIndex = 0;
