@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <iostream>
+#include <windows.h>
 #include <conio.h>
-#include <Windows.h>
-#include <math.h>
-#include "console.h"
 #include <mmsystem.h>
+#include "console.h"
+
 #pragma comment(lib, "winmm.lib")
+
+using namespace std;
 
 //키보드값
 #define UP 0
@@ -33,9 +33,6 @@ int main()
         menuDraw();
         Sleep(1000);
     }
-
-    //일반 재생
-
 
     return 0;
 }
@@ -75,45 +72,50 @@ void TitleDraw()
 
 }
 
-int menuDraw() {
+int menuDraw()
+{
     int x = 55;
     int y = 26;
     int menuIndex = 0;
-    char menuItems[2][20] = { "게 임 시 작", "게 임 정 보" };
+    string menuItems[2] = { "게 임 시 작", "게 임 정 보" };
 
-    while (1) {
-
-        for (int i = 0; i < 2; i++) {
+    while (1)
+    {
+        for (int i = 0; i < 2; i++)
+        {
             gotoxy(x, y + i);
-            if (i == menuIndex) printf("> %s", menuItems[i]);
-            else printf("  %s", menuItems[i]);
+            if (i == menuIndex)
+                cout << "> " << menuItems[i];
+            else
+                cout << "  " << menuItems[i];
         }
 
         int n = keyControl();
-        switch (n) {
-        case UP: {
-            if (menuIndex > 0) menuIndex--;
+        switch (n)
+        {
+        case UP:
+            if (menuIndex > 0)
+                menuIndex--;
             break;
-        }
-        case DOWN: {
-            if (menuIndex < 2) menuIndex++;
+        case DOWN:
+            if (menuIndex < 1)
+                menuIndex++;
             break;
-        }
-        case SUBMIT: {
-            if (menuIndex == 0) {
+        case SUBMIT:
+            if (menuIndex == 0)
+            {
                 //return Function();
             }
-            else if (menuIndex == 1) {
+            else if (menuIndex == 1)
+            {
                 // GameRule();
-
             }
-        }
         }
     }
 }
 
-
-int keyControl() {
+int keyControl()
+{
     int temp = _getch();
 
     if (temp == 0xE0 || temp == 0)
@@ -121,7 +123,8 @@ int keyControl() {
         temp = _getch();
     }
 
-    switch (temp) {
+    switch (temp)
+    {
     case 72: // VK_UP
         return UP;
     case 80: // VK_DOWN
@@ -136,3 +139,4 @@ int keyControl() {
         return 0;
     }
 }
+
