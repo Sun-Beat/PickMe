@@ -1,0 +1,4 @@
+﻿  firstscreen.cpp
+C:\Users\happy\Desktop\pickme\pickme\pickme\console.h(38,21): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\happy\Desktop\pickme\pickme\pickme\console.h(38,28): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  pickme.vcxproj -> C:\Users\happy\Desktop\pickme\pickme\x64\Debug\pickme.exe
