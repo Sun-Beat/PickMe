@@ -117,6 +117,8 @@ int menuDraw()
                 //return Function();
             }
             else if (menuIndex == 1)
+
+                Rb
             {
                 GameRule();
             }
