@@ -118,7 +118,6 @@ int menuDraw()
             }
             else if (menuIndex == 1)
 
-                Rb
             {
                 GameRule();
             }
