@@ -72,6 +72,16 @@ void TitleDraw()
 
 }
 
+void GameRule() {
+    system("cls");
+
+    cout << "게임 룰을 설명합니다." << endl;
+    cout << "..." << endl;
+
+    cout << "계속하려면 아무 키나 누르세요...";
+    _getch(); 
+}
+
 int menuDraw()
 {
     int x = 55;
@@ -108,7 +118,7 @@ int menuDraw()
             }
             else if (menuIndex == 1)
             {
-                // GameRule();
+                GameRule();
             }
         }
     }
